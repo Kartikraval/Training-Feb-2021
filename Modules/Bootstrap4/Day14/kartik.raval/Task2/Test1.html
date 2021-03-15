@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>HRS System</title>
+  </head>
+  <body>
+    <div class="Container py-5">
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4 bg-success">
+                <h2 class="Login text-center">Login</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="text" Name="Email" class="form-control" id="email" placeholder="Enter Email"><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">Password</label>
+                        <input type="password" Name="Password" class="form-control" id="password" placeholder="Enter Email"><br>
+                    </div>
+                </form>
+                <button type="button" class="btn btn-light mb-2 btn-center" onclick="redirect()">Login</button>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        function redirect(){
+            var temp1 = document.getElementById('email').value;
+            var temp2 = document.getElementById('password').value;
+            console.log(temp1);
+            if(temp1 == "admin" && temp2 == "admin")
+            {
+                window.location.href = "Test2.html"
+            }
+            if(temp1 == null || temp1 != 'admin')
+            {
+                alert("Please enter email");
+                return false;
+            }
+            if(temp2 == null || temp2 !='admin')
+            {
+                alert("Please enter password");
+                return false;
+            }
+        }
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

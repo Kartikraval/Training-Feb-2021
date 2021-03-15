@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>HRS System</title>
+  </head>
+  <body>
+    <div class="Container py-5">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 bg-success">
+                <h2 class="Login text-center">Employee form</h2>
+                <div class="form-group">
+                    <label for="Name">Name</label>
+                    <input type="text" Name="Name" class="form-control" id="Name" placeholder="Enter Name"><br>
+                </div>
+                <div class="form-group">
+                    <label for="Contact">Contact</label>
+                    <input type="text" Name="Contact" class="form-control" id="Contact" placeholder="Enter Contact number"><br>
+                </div>
+                    <label for="Gender">Gender</label><br>    
+                    <input class="radio" type="radio" id="male" name="gender" checked="checked">
+                    <label for="male">Male</label>
+                    <input class="radio" type="radio" id="female" name="gender">
+                    <label for="female">Female</label><br><br>
+                <div class="form-group">
+                    <label for="Address">Address</label>
+                    <input type="text" Name="Address" class="form-control" id="Address" placeholder="Enter Address"><br>
+                </div>
+                <div class="form-group">
+                    <label for="City">City</label>
+                    <input type="text" Name="City" class="form-control" id="City" placeholder="Enter City"><br>
+                </div>
+                <select id="country">
+                    <option value="0" id="o_ps" selected>Please select country</option>
+                    <option value="1" id="o_ind">India</option>
+                    <option value="2" id="o_aus">Australia</option>
+                    <option value="3" id="o_sri">Srilanka</option>
+                    <option value="4" id="o_eng">Englnd</option>
+                </select><br><br>
+                <select id="Ind_state" style = "display: none;">
+                    <option value="0" id="o_s1" selected>Please select state</option>
+                    <option value="1" id="o_guj">Gujarat</option>
+                    <option value="2" id="o_mah">Maharastra</option>
+                    <option value="3" id="o_up">UP</option>
+                    <option value="4" id="o_mp">MP</option>
+                    <option value="5" id="o_ap">AP</option>
+                </select><br><br>
+                <select id="Aus_state" >
+                    <option value="0" id="o_s2" selected>Please select state</option>
+                    <option value="1" id="o_ade">Adelaide</option>
+                    <option value="2" id="o_bris">Brisbane</option>
+                    <option value="3" id="o_mel">Melbourne</option>
+                </select><br><br>
+                <button type="button" class="button btn-light mb-2" onclick="redirect()">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        $(document).ready(function(){
+            $("#Ind_state").hide();
+            $("#Aus_state").hide();
+
+            $("#country").change(function(){
+                
+            });
+            // var temp = $("#country").val('2');
+            // if(temp == 1){
+            //     $("#Ind_state").show();
+            //     $("#Aus_state").hide();
+            // }
+        });
+        function redirect(){
+            var name = document.getElementById('Name').value;
+            var contact = document.getElementById('Contact').value;
+            var address = document.getElementById('Address').value;
+            var city = document.getElementById('City').value;
+            if(name == null || name == ""){
+                alert("Please enter name");
+                return false;
+            }
+            else if(isNaN(contact)){
+                alert("Please enter contact properly");
+                return false;
+            }
+            else if(address == null || address == ""){
+                alert("Please enter address");
+                return false;
+            }
+            else if(city == null || city == ""){
+                alert("Please enter city");
+                return false;
+            }
+            else{          
+                alert("Successfully registered");
+            }
+        }
+        
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

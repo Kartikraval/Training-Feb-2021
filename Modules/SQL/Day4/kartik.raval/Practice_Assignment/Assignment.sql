@@ -5,7 +5,7 @@
 /*2. Select 4th Highest salary from employee table using ranking function*/
 	/*S_rank = 3 because 2 rank is having same salary*/
 
-	SELECT Salary FROM(SELECT Salary,DENSE_RANK() over(ORDER BY Salary DESC) AS S_rank FROM Temp) as a where S_rank=3;
+	SELECT Salary FROM(SELECT Salary,DENSE_RANK() OVER (ORDER BY Salary DESC) AS S_rank FROM Temp) AS a WHERE S_rank=3;
 
 /*3. Get department, total salary with respect to a department from employee table.*/
       
@@ -25,4 +25,4 @@
 
 /*7. Select department, total salary with respect to a department from employee table where total salary greater than 50000 order by TotalSalary descending*/
 
-	SELECT DepartmentID, SUM(Salary) AS TotalSalary FROM Temp Where Salary >= 5000 GROUP BY DepartmentID ;
+	SELECT DepartmentID, SUM(Salary) AS TotalSalary FROM Temp Where Salary >= 5000 GROUP BY DepartmentID;

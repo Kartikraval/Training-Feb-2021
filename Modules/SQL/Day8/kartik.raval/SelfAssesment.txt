@@ -1,0 +1,82 @@
+True OR False:
+
+A primary key can contain NULL values - False
+A clustered index usually improves performance when inserting data. False 
+A table can contain only one clustered index. - True
+
+Fill ups:
+
+The value of a primary key must be Unique.
+Values in a clustered index are Integer
+
+
+MCQ
+
+Which of the following is not a constraint?
+a. CHECK
+b. DEFAULT
+c. UNIQUE
+d. INDEX 
+
+Answer - D
+
+Which of the following things can help speed data retrieval?
+a. A DEFAULT constraint
+b. A primary key constraint
+c. A clustered index 
+d. A foreign key constraint
+
+Answer - C
+
+Which of the following statements are true?
+a. A greater number of narrow tables (with fewer columns) is a characteristic of a
+normalized database.
+b. A few wide tables (with more columns) are characteristic of a normalized database.
+c. Indexes allow faster data retrieval.
+d. Optimal database performance can be achieved by indexing every column in a table.
+
+Answer - C
+
+Which of the following statements is not true with regard to foreign keys?
+a. A foreign key is a combination of one or more columns used to establish and enforce
+a link between the data in two tables.
+b. You can create a foreign key by defining a foreign key constraint when you create or
+alter a table.
+c. A foreign key enforces referential integrity by ensuring only valid data is stored.
+d. A table can contain only one foreign key.
+
+Answer - D
+
+Consider using a clustered index when:
+a. Columns contain a large number of distinct values
+b. Columns are accessed sequentially
+c. Columns undergo frequent changes
+d. Queries return large result sets
+
+Answer - D
+
+Which of the following could not be used as a primary key?
+a. A Social Security number
+b. An address
+c. An employee number
+d. The serial number of an electronic component
+
+Answer - B
+
+How many clustered indexes can you have for a database?
+a. 1
+b. 2
+c. 4
+d. 8
+
+Answer - A
+
+What is the name for the situation in which more than one columns act as a primary
+key?
+a. Composite primary key
+b. Escalating key
+c. Foreign key
+d. Constraint key
+
+Answer - A
+
